@@ -10,6 +10,9 @@
 		CC2543FC26A3655E001304EE /* DependencyContainer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC2543F226A3655E001304EE /* DependencyContainer.framework */; };
 		CC25440126A3655E001304EE /* DependencyContainerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC25440026A3655E001304EE /* DependencyContainerTests.swift */; };
 		CC25440326A3655E001304EE /* DependencyContainer.h in Headers */ = {isa = PBXBuildFile; fileRef = CC2543F526A3655E001304EE /* DependencyContainer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CC25440D26A3658E001304EE /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC25440C26A3658E001304EE /* DependencyContainer.swift */; };
+		CC25440F26A368F9001304EE /* Weak.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC25440E26A368F9001304EE /* Weak.swift */; };
+		CC25441326A36BA9001304EE /* Injected.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC25441226A36BA9001304EE /* Injected.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +32,9 @@
 		CC2543FB26A3655E001304EE /* DependencyContainerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DependencyContainerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC25440026A3655E001304EE /* DependencyContainerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainerTests.swift; sourceTree = "<group>"; };
 		CC25440226A3655E001304EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC25440C26A3658E001304EE /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
+		CC25440E26A368F9001304EE /* Weak.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weak.swift; sourceTree = "<group>"; };
+		CC25441226A36BA9001304EE /* Injected.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injected.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +79,9 @@
 			children = (
 				CC2543F526A3655E001304EE /* DependencyContainer.h */,
 				CC2543F626A3655E001304EE /* Info.plist */,
+				CC25440C26A3658E001304EE /* DependencyContainer.swift */,
+				CC25440E26A368F9001304EE /* Weak.swift */,
+				CC25441226A36BA9001304EE /* Injected.swift */,
 			);
 			path = DependencyContainer;
 			sourceTree = "<group>";
@@ -147,6 +156,7 @@
 				TargetAttributes = {
 					CC2543F126A3655E001304EE = {
 						CreatedOnToolsVersion = 12.5.1;
+						LastSwiftMigration = 1250;
 					};
 					CC2543FA26A3655E001304EE = {
 						CreatedOnToolsVersion = 12.5.1;
@@ -194,6 +204,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC25440D26A3658E001304EE /* DependencyContainer.swift in Sources */,
+				CC25440F26A368F9001304EE /* Weak.swift in Sources */,
+				CC25441326A36BA9001304EE /* Injected.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +354,7 @@
 		CC25440726A3655E001304EE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 7C535NZYGP;
@@ -357,6 +371,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.standardbank.DependencyContainer;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -365,6 +380,7 @@
 		CC25440826A3655E001304EE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 7C535NZYGP;
@@ -389,6 +405,7 @@
 		CC25440A26A3655E001304EE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7C535NZYGP;
 				INFOPLIST_FILE = DependencyContainerTests/Info.plist;
@@ -407,6 +424,7 @@
 		CC25440B26A3655E001304EE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7C535NZYGP;
 				INFOPLIST_FILE = DependencyContainerTests/Info.plist;
