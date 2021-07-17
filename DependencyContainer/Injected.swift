@@ -18,14 +18,3 @@ class Injected<T> {
     
 }
 
-class AccountManagger {
-    
-    
-    
-}
-
-class ABC {
-    
-    @Injected var accountManager: AccountManagger
-    
-}
